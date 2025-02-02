@@ -9,7 +9,7 @@
     const limparAnotacaoButton = document.getElementById('limparAnotacao');
 
     let intervalo;
-    let tempoRestante = 25 * 60; // 25 minutos em segundos
+    let tempoRestante = 25 * 60; 
 
     // Função para atualizar o display do tempo
     function atualizarDisplay() {
@@ -21,7 +21,7 @@
 
     // Função para iniciar o timer
     function iniciarTimer() {
-        if (intervalo) return; // Evita múltiplos intervalos
+        if (intervalo) return; 
         intervalo = setInterval(() => {
             if (tempoRestante > 0) {
                 tempoRestante--;
