@@ -1,24 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     background-color: grey;
+    padding: 20px; 
 }
-p{
-    font-family: Nunito, sans-serif ;
+
+p {
+    font-family: Nunito, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
- h1{
+
+h1 {
     font-family: Poppins, sans-serif;
     color: azure;
 }
-span{
+
+span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,47 +31,51 @@ span{
     color: rgb(169, 230, 230);
 }
 
-.logo-container{
+.logo-container {
     width: 40vh;
     padding: 5px 0 5px 15px;
     display: flex;
     align-items: center;
-    
-
 }
-.logo-container h2{
+
+.logo-container h2 {
     font-family: Poppins, sans-serif;
     color: azure;
 }
 
-.logo{
+.logo {
     margin-right: 10px;
     width: 50px;
     height: auto;
-   
 }
-.container{
+
+.container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
+    width: 100%; 
 }
-.container .info{
+
+.container .info {
     display: flex;
-     
 }
-.info{
+
+.info {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
-.logo-container img{
+
+.logo-container img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
-.container-pomodoro{
+
+.container-pomodoro {
     display: flex;
-    width:500px;
+    width: 100%; 
+    max-width: 500px; 
     background-color: rgba(48, 39, 182, 0.1);
     border: 1px solid black;
     padding: 20px;
@@ -74,7 +83,7 @@ span{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#pomodoro{
+#pomodoro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,7 +95,8 @@ span{
     background-color: rgba(48, 39, 182, 0.1);
     border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);}
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 #pomodoro h1 {
     font-size: 24px;
@@ -129,7 +139,8 @@ span{
 #pomodoro .tempo span {
     margin: 0 5px;
 }
-#anotacao{
+
+#anotacao {
     width: 100%;
     height: 100px;
     margin-top: 10px;
@@ -141,3 +152,71 @@ span{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Media Queries para Responsividade */
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+    .logo-container {
+        width: 100%; 
+        padding: 5px;
+    }
+
+    .logo-container img {
+        width: 80px; 
+        height: 80px;
+    }
+
+    .container-pomodoro {
+        padding: 10px; 
+    }
+
+    #pomodoro h1 {
+        font-size: 20px; 
+    }
+
+    #pomodoro p {
+        font-size: 14px; 
+    }
+
+    #pomodoro button {
+        font-size: 14px; 
+        padding: 8px 16px;
+    }
+
+    #anotacao {
+        height: 80px; 
+    }
+}
+
+/* Tablets (601px a 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .container-pomodoro {
+        max-width: 90%; 
+    }
+
+    #pomodoro h1 {
+        font-size: 22px; 
+    }
+
+    #pomodoro p {
+        font-size: 15px; 
+    }
+
+    #pomodoro button {
+        font-size: 15px; 
+    }
+}
+
+/* Notebooks (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-pomodoro {
+        max-width: 80%; 
+    }
+}
+
+/* PCs (acima de 1024px) */
+@media (min-width: 1025px) {
+    .container-pomodoro {
+        max-width: 500px; 
+    }
+}
